@@ -19,7 +19,7 @@ function filter_term(term_state,children_term_map)
                 if term_state[child] == 0 then child_all_ready = false;break end
             end
 
-            if child_all_ready == true then table.insert(result_list,term_name) end
+            if child_all_ready == true then table.insert(result_list,term_name) end  #what does table.insert do? 
 
         end
     end
@@ -171,7 +171,7 @@ for term_name,neuron in pairs(loss_node_map) do
 	index = index + 1
 end
 
-local NN_model = nn.gModule({gene_layer},output_term_list)
+local NN_model = nn.gModule({gene_layer},output_term_list)  # this is NN model, is gene_layper the input layer? 
 
 --local loss_vector= nn.MSECriterion()
 --local regression_loss = nn.SmoothL1Criterion()
